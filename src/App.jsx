@@ -112,7 +112,7 @@ const METRICS = [
 ];
 
 const SKILLS = [
-  { group: "Core", icon: Code2 as any, items: ["React", "Next.js", "JavaScript", "TypeScript", "Tailwind"] },
+  { group: "Core", icon: Code2, items: ["React", "Next.js", "JavaScript", "TypeScript", "Tailwind"] },
   { group: "Backend", icon: Server, items: ["Rust", "Python", "PHP", "Laravel", "Express.js", "FastAPI"] },
   { group: "Design", icon: Palette, items: ["UI/UX", "Figma", "Photoshop", "Responsive Design"] },
   { group: "Infrastructure", icon: Cpu, items: ["AWS", "Docker", "Firebase", "CI/CD", "Security Analysis"] }
@@ -137,7 +137,7 @@ const Glass = ({ className = "", children }) => (
   </div>
 );
 
-function MagneticButton({ children, className = "", onClick }: any) {
+function MagneticButton({ children, className = "", onClick }) {
   const ref = useRef(null);
   const x = useMotionValue(0);
   const y = useMotionValue(0);
@@ -287,7 +287,7 @@ function LetsTalkButton() {
 
 /* ---------- 2. THE SLIDER COMPONENT (WITH REAL IMAGE SUPPORT) ---------- */
 
-function ProjectSlider({ project, showControls = true }: any) {
+function ProjectSlider({ project, showControls = true }) {
   const [index, setIndex] = useState(0);
   const images = project.images || [];
 
@@ -375,7 +375,7 @@ function ProjectSlider({ project, showControls = true }: any) {
 
 /* ---------- UI Components ---------- */
 
-function ProjectCard({ project, onOpen }: any) {
+function ProjectCard({ project, onOpen }) {
   return (
     <motion.button
       initial={{ opacity: 0, y: 10 }}
@@ -422,7 +422,7 @@ function ProjectCard({ project, onOpen }: any) {
   );
 }
 
-function ProjectsPage({ onOpen }: any) {
+function ProjectsPage({ onOpen }) {
   return (
     <motion.section
       initial={{ opacity: 0, y: 14 }}
@@ -446,7 +446,7 @@ function ProjectsPage({ onOpen }: any) {
   );
 }
 
-function HomePage({ setPath }: any) {
+function HomePage({ setPath }) {
   return (
     <motion.section
       initial={{ opacity: 0, y: 14 }}
