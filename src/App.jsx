@@ -143,9 +143,8 @@ function MagneticButton({ children, className = "", onClick }) {
   const y = useMotionValue(0);
 
   function onMove(e) {
+    if (typeof window === "undefined") return;
     if (window.innerWidth < 768) return;
-    const el = ref.current;
-    if (!el) return;
     const r = el.getBoundingClientRect();
     const dx = e.clientX - (r.left + r.width / 2);
     const dy = e.clientY - (r.top + r.height / 2);
