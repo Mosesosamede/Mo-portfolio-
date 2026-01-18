@@ -38,11 +38,11 @@ const PROJECTS = [
     isAI: true,
     status: "updating",
     color: "from-blue-600 to-indigo-900",
-    // CHANGE THESE URLS TO YOUR SCREENSHOTS
+    // Image Url for project 
     images: [
-      "https://placehold.co/1200x800/0f172a/ffffff?text=Brand+Analysis+Dashboard",
-      "https://placehold.co/1200x800/1e293b/ffffff?text=AI+Trait+Mapping",
-      "https://placehold.co/1200x800/334155/ffffff?text=Strategy+Roadmap"
+      "https://i.ibb.co/rR8bKLN2/file-000000007ac471f4bdc62a44e116151b.png",
+      "https://i.ibb.co/S4cd7rMS/file-000000004c9471f4a1ee2f9e5087e6ae.png",
+      "https://i.ibb.co/TBFDKHwd/file-00000000a834720a99daa927918b87dd.png"
     ]
   },
   {
@@ -56,11 +56,11 @@ const PROJECTS = [
     isAI: true,
     status: "updating",
     color: "from-emerald-600 to-teal-900",
-    // CHANGE THESE URLS TO YOUR SCREENSHOTS
+    // Image Url 
     images: [
-      "https://placehold.co/1200x800/064e3b/ffffff?text=Campaign+Planner",
-      "https://placehold.co/1200x800/065f46/ffffff?text=Audience+Insights",
-      "https://placehold.co/1200x800/047857/ffffff?text=ROI+Forecaster"
+      "https://i.ibb.co/Fkpw8F8k/file-000000008bd4722f9ed50ec7d7eabf44.png",
+      "https://i.ibb.co/cS67kYC2/file-00000000b5f8722f8cdd065721462480.png",
+      "https://i.ibb.co/Q7B3s2sS/file-0000000029fc722f9e18b94888ce91ad.png"
     ]
   },
   {
@@ -76,9 +76,9 @@ const PROJECTS = [
     color: "from-rose-600 to-orange-900",
     // CHANGE THESE URLS TO YOUR SCREENSHOTS
     images: [
-      "https://placehold.co/1200x800/4c0519/ffffff?text=Threat+Landscape",
-      "https://placehold.co/1200x800/881337/ffffff?text=Service+Audit",
-      "https://placehold.co/1200x800/9f1239/ffffff?text=Remediation+Panel"
+      "https://i.ibb.co/zVkBLk89/file-000000003a30722f91dd56805b73677d.png",
+      "https://i.ibb.co/HLcGfyzz/file-000000007190722f8e2f89b062338c21.png",
+      "https://i.ibb.co/cXLBM3Mn/file-00000000959c722f991947e9c080c7f4.png"
     ]
   },
 ];
@@ -532,200 +532,3 @@ function HomePage({ setPath }) {
                 </div>
               ))}
             </div>
-          </Glass>
-
-          <Glass className="rounded-3xl p-8 bg-gradient-to-br from-blue-600/10 to-transparent">
-             <div className="text-xl font-black mb-3 text-white">Direct Contact</div>
-             <p className="text-sm text-zinc-400 mb-8 font-medium">Available for specialized remote & onsite engineering contracts.</p>
-             <div className="space-y-3">
-               <a href={`tel:${PROFILE.phone}`} className="flex items-center gap-3 text-zinc-300 hover:text-white transition">
-                 <Phone size={16} className="text-blue-400" /> <span className="text-sm font-bold">{PROFILE.phone}</span>
-               </a>
-               <a href={`mailto:${PROFILE.email}`} className="flex items-center gap-3 text-zinc-300 hover:text-white transition">
-                 <Mail size={16} className="text-blue-400" /> <span className="text-sm font-bold truncate">{PROFILE.email}</span>
-               </a>
-             </div>
-          </Glass>
-        </div>
-      </div>
-    </motion.section>
-  );
-}
-
-/* ---------- Main App & Layout ---------- */
-
-export default function App() {
-  const [path, setPath] = useState("home");
-  const [activeProject, setActiveProject] = useState(null);
-
-  const { scrollYProgress } = useScroll();
-  const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 20, mass: 0.3 });
-
-  useEffect(() => {
-    const onKey = (e) => {
-      if (e.key === "Escape") setActiveProject(null);
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, []);
-
-  useEffect(() => {
-    document.body.style.overflow = activeProject ? 'hidden' : 'unset';
-  }, [activeProject]);
-
-  return (
-    <div className="min-h-screen bg-zinc-950 text-white selection:bg-blue-500/30 font-sans overflow-x-hidden">
-      <motion.div style={{ scaleX: progress }} className="fixed left-0 top-0 h-1 w-full origin-left bg-blue-500/70 z-[60]" />
-
-      <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-blue-500/15 blur opacity-70" />
-        <div className="absolute top-40 -left-40 h-[420px] w-[420px] rounded-full bg-yellow-500/10 blur-[90px]" />
-        <div className="absolute bottom-0 right-0 h-[420px] w-[420px] rounded-full bg-fuchsia-500/10 blur-[100px]" />
-      </div>
-
-      <nav className="fixed top-0 w-full z-50 border-b border-zinc-800/50 bg-zinc-950/70 backdrop-blur-xl">
-        <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-4 sm:px-6">
-          <button onClick={() => setPath("home")} className="flex items-center gap-3 group">
-            <div className="grid place-items-center h-10 w-10 rounded-xl bg-zinc-900 border border-zinc-800 group-hover:border-blue-500/50 transition">
-              <Sparkles className="h-5 w-5 text-blue-400" />
-            </div>
-            <span className="text-xl font-black tracking-tighter">
-              {PROFILE.nickname}<span className="text-blue-500">.</span>
-            </span>
-          </button>
-
-          <div className="flex items-center gap-2">
-            {["home", "projects"].map((key) => (
-              <button
-                key={key}
-                onClick={() => setPath(key)}
-                className={cn(
-                  "relative rounded-full px-5 py-2 text-sm font-black transition-all capitalize",
-                  key === path ? "text-white" : "text-zinc-500 hover:text-white"
-                )}
-              >
-                {key === path && (
-                  <motion.span
-                    layoutId="navPill"
-                    className="absolute inset-0 rounded-full bg-zinc-900 border border-zinc-800"
-                    transition={{ type: "spring", stiffness: 500, damping: 40 }}
-                  />
-                )}
-                <span className="relative">{key}</span>
-              </button>
-            ))}
-          </div>
-        </div>
-      </nav>
-
-      <main className="pt-24 pb-20">
-        <AnimatePresence mode="wait">
-          {path === "projects" ? (
-            <ProjectsPage key="projects" onOpen={setActiveProject} />
-          ) : (
-            <HomePage key="home" setPath={setPath} />
-          )}
-        </AnimatePresence>
-      </main>
-
-      <footer className="border-t border-zinc-900 bg-zinc-950/70 py-16">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 flex flex-col md:flex-row justify-between items-center gap-8">
-          <div className="text-center md:text-left">
-            <div className="text-2xl font-black mb-2">{PROFILE.name}</div>
-            <div className="text-zinc-500 font-medium">{PROFILE.title}</div>
-          </div>
-          
-          <div className="flex gap-4">
-            <a href={PROFILE.socials.github} target="_blank" className="p-4 rounded-full border border-zinc-800 bg-zinc-900/40 hover:text-blue-400 transition"><Github size={20} /></a>
-            <a href={PROFILE.socials.linkedin} target="_blank" className="p-4 rounded-full border border-zinc-800 bg-zinc-900/40 hover:text-blue-400 transition"><Linkedin size={20} /></a>
-          </div>
-        </div>
-      </footer>
-
-      <AnimatePresence>
-        {activeProject && (
-          <ProjectModal project={activeProject} onClose={() => setActiveProject(null)} />
-        )}
-      </AnimatePresence>
-    </div>
-  );
-}
-
-function ProjectModal({ project, onClose }) {
-  const isUpdating = project.status === 'updating';
-
-  return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className="fixed inset-0 z-[100] grid place-items-center p-4 sm:p-6 backdrop-blur-xl bg-black/80"
-      onClick={onClose}
-    >
-      <motion.div
-        initial={{ scale: 0.9, y: 30 }}
-        animate={{ scale: 1, y: 0 }}
-        exit={{ scale: 0.9, y: 30 }}
-        onClick={(e) => e.stopPropagation()}
-        className="w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-zinc-950 border border-zinc-800 rounded-[3rem] shadow-2xl no-scrollbar"
-      >
-        <div className="sticky top-0 right-0 flex justify-end p-8 z-20">
-          <button onClick={onClose} className="p-3 rounded-full bg-zinc-900 border border-zinc-800 hover:bg-zinc-800 transition">
-            <X size={24} />
-          </button>
-        </div>
-
-        <div className="px-8 pb-16 sm:px-16">
-          <div className="mb-12 rounded-3xl overflow-hidden border border-zinc-800 shadow-2xl aspect-[16/10]">
-             <ProjectSlider project={project} />
-          </div>
-
-          <div className="flex items-center gap-3 mb-4">
-            <div className="text-blue-500 font-bold uppercase tracking-[0.2em] text-xs">{project.stack}</div>
-            {isUpdating && (
-               <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-500/10 border border-yellow-500/20">
-                 <RefreshCcw size={10} className="text-yellow-500 animate-spin" />
-                 <span className="text-[10px] font-bold text-yellow-500 uppercase tracking-widest">Update in progress</span>
-               </div>
-            )}
-          </div>
-          
-          <h2 className="text-4xl sm:text-6xl font-black mb-12 tracking-tight">{project.name}</h2>
-
-          <div className="grid gap-12 md:grid-cols-2">
-            <div className="space-y-10">
-              <section>
-                <div className="text-sm font-black text-zinc-500 uppercase tracking-widest mb-3">The Problem</div>
-                <p className="text-zinc-300 text-lg leading-relaxed">{project.problem}</p>
-              </section>
-              <section>
-                <div className="text-sm font-black text-zinc-500 uppercase tracking-widest mb-3">The Solution</div>
-                <p className="text-zinc-300 text-lg leading-relaxed">{project.solution}</p>
-              </section>
-            </div>
-
-            <div className="bg-zinc-900/50 rounded-3xl p-8 border border-zinc-800 h-fit">
-              <h4 className="text-xl font-black mb-6">Strategic Impact</h4>
-              <ul className="space-y-4">
-                {project.impact.map(i => (
-                  <li key={i} className="flex gap-4 text-zinc-300">
-                    <CheckCircle2 className="h-6 w-6 text-blue-500 shrink-0" />
-                    <span className="font-medium text-sm">{i}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          <div className="mt-16">
-            {!isUpdating && (
-              <a href={project.links[0].href} target="_blank" className="inline-flex items-center gap-2 px-10 py-4 rounded-full bg-white text-black font-black hover:bg-blue-500 hover:text-white transition">
-                Launch Prototype <ExternalLink size={18} />
-              </a>
-            )}
-          </div>
-        </div>
-      </motion.div>
-    </motion.div>
-  );
-}
