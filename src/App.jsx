@@ -88,10 +88,9 @@ const PROFILE = {
   nickname: "Mo",
   title: "Senior Full-Stack Developer",
   summaryItems: [
-    "Backend & Infrastructure Enthusiast",
-    "High-Fidelity Frontend Engineer",
-    "Open to Remote & Onsite roles",
-    "Solving complex problems at scale"
+    "Architected a distributed processing pipeline for large-scale sentiment analysis",
+    "Optimized data flow and system performance under high-volume workloads",
+    "Owned system design, implementation, and iteration",
   ],
   location: "Lagos, NG • Remote & Onsite",
   email: "obsmoses@gmail.com",
