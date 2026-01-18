@@ -532,4 +532,4 @@ function HomePage({ setPath }) {
                 </div>
               ))}
             </div>
-             </Glass>
+          </Glass>
