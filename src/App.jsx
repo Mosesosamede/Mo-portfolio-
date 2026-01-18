@@ -97,10 +97,10 @@ const PROFILE = {
   email: "obsmoses@gmail.com",
   phone: "+234 (916) 587 7240",
   website: "https://obsmoses.page.gd",
-  status: "Available for new opportunities",
+  status: "Available for Software Engineering, Infrastructure",
   socials: {
-    github: "https://github.com/blade-code",
-    linkedin: "https://linkedin.com/in/moses",
+    github: "https://github.com/obsmoses",
+    linkedin: "https://linkedin.com/in/null",
   },
 };
 
