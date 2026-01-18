@@ -76,9 +76,9 @@ const PROJECTS = [
     color: "from-rose-600 to-orange-900",
     // CHANGE THESE URLS TO YOUR SCREENSHOTS
     images: [
-      "https://placehold.co/1200x800/4c0519/ffffff?text=Threat+Landscape",
-      "https://placehold.co/1200x800/881337/ffffff?text=Service+Audit",
-      "https://placehold.co/1200x800/9f1239/ffffff?text=Remediation+Panel"
+      "https://i.ibb.co/zVkBLk89/file-000000003a30722f91dd56805b73677d.png",
+      "https://i.ibb.co/HLcGfyzz/file-000000007190722f8e2f89b062338c21.png",
+      "https://i.ibb.co/cXLBM3Mn/file-00000000959c722f991947e9c080c7f4.png"
     ]
   },
 ];
