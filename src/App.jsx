@@ -30,7 +30,7 @@ const PROJECTS = [
   {
     name: "Brand Analysis AI",
     stack: "React • Node.js • Python • AWS",
-    short: "Turn brand ideas into market-ready strategy using demand signals.",
+    short: "Enabled faster brand validation through automated demand and positioning analysis",
     problem: "Founders struggle to validate their brand ideas objectively and align with market demand.",
     solution: "Built an AI-driven platform to analyze brand traits, assess market fit, and refine strategy.",
     impact: ["Clear validation of brand direction", "Faster go-to-market strategy", "Data-driven recommendations"],
@@ -48,7 +48,7 @@ const PROJECTS = [
   {
     name: "Ads Manager AI",
     stack: "React • Python • Tailwind • AWS",
-    short: "Suggests content angles and placements for focused campaigns.",
+    short: "Enabled faster brand validation through automated demand and positioning analysis.",
     problem: "Brands waste ad spend targeting the wrong audience.",
     solution: "Created an AI platform that recommends content formats, targeting, and platform placements.",
     impact: ["Improved ad relevance", "Increased campaign ROI", "Faster decision-making"],
@@ -66,7 +66,7 @@ const PROJECTS = [
   {
     name: "Network Exposure Analysis",
     stack: "React • Node.js • AWS • Python",
-    short: "Detects and mitigates network vulnerabilities and misconfigurations.",
+    short: "Engineered a security analysis system to detect exposed services and configuration risks.",
     problem: "Exposed services and misconfigurations are a major security risk.",
     solution: "Developed an analysis tool to identify risks and suggest remedial actions.",
     impact: ["Reduced security vulnerabilities", "Improved network security posture", "Faster incident response"],
@@ -431,6 +431,7 @@ function ProjectsPage({ onOpen }) {
       className="mx-auto max-w-6xl px-4 sm:px-6 pb-16"
     >
       <header className="pt-4 sm:pt-6 mb-12">
+        <h5 className="text-3xl sm:text-5xl font-black tracking-tight">production</h2>
         <h2 className="text-4xl sm:text-6xl font-black tracking-tight">Case Studies</h2>
         <p className="mt-4 text-zinc-400 text-lg max-w-2xl">
           Deep dives into engineered systems designed for scale, security, and high performance.
@@ -483,7 +484,7 @@ function HomePage({ setPath }) {
 
             <div className="flex flex-col sm:flex-row items-center gap-4">
               <MagneticButton onClick={() => setPath("projects")}>
-                Explore Works <ArrowRight className="h-5 w-5" />
+                View System <ArrowRight className="h-5 w-5" />
               </MagneticButton>
 
               <LetsTalkButton />
@@ -536,7 +537,7 @@ function HomePage({ setPath }) {
 
           <Glass className="rounded-3xl p-8 bg-gradient-to-br from-blue-600/10 to-transparent">
              <div className="text-xl font-black mb-3 text-white">Direct Contact</div>
-             <p className="text-sm text-zinc-400 mb-8 font-medium">Available for specialized remote & onsite engineering contracts.</p>
+             <p className="text-sm text-zinc-400 mb-8 font-medium">Available for remote & onsite Fullstack engineering role.</p>
              <div className="space-y-3">
                <a href={`tel:${PROFILE.phone}`} className="flex items-center gap-3 text-zinc-300 hover:text-white transition">
                  <Phone size={16} className="text-blue-400" /> <span className="text-sm font-bold">{PROFILE.phone}</span>
@@ -720,7 +721,7 @@ function ProjectModal({ project, onClose }) {
           <div className="mt-16">
             {!isUpdating && (
               <a href={project.links[0].href} target="_blank" className="inline-flex items-center gap-2 px-10 py-4 rounded-full bg-white text-black font-black hover:bg-blue-500 hover:text-white transition">
-                Launch Prototype <ExternalLink size={18} />
+                Offline-fornow <ExternalLink size={18} />
               </a>
             )}
           </div>
