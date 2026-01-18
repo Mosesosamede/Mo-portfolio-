@@ -431,8 +431,7 @@ function ProjectsPage({ onOpen }) {
       className="mx-auto max-w-6xl px-4 sm:px-6 pb-16"
     >
       <header className="pt-4 sm:pt-6 mb-12">
-        <h5 className="text-3xl sm:text-5xl font-black tracking-tight">production</h5>
-        <h2 className="text-4xl sm:text-6xl font-black tracking-tight">Case Studies</h2>
+        <h2 className="text-4xl sm:text-6xl font-black tracking-tight">Production Systems</h2>
         <p className="mt-4 text-zinc-400 text-lg max-w-2xl">
           Deep dives into engineered systems designed for scale, security, and high performance.
         </p>
