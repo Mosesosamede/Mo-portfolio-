@@ -40,9 +40,9 @@ const PROJECTS = [
     color: "from-blue-600 to-indigo-900",
     // CHANGE THESE URLS TO YOUR SCREENSHOTS
     images: [
-      "https://placehold.co/1200x800/0f172a/ffffff?text=Brand+Analysis+Dashboard",
-      "https://placehold.co/1200x800/1e293b/ffffff?text=AI+Trait+Mapping",
-      "https://placehold.co/1200x800/334155/ffffff?text=Strategy+Roadmap"
+      "https://i.ibb.co/rR8bKLN2/file-000000007ac471f4bdc62a44e116151b.png",
+      "https://i.ibb.co/S4cd7rMS/file-000000004c9471f4a1ee2f9e5087e6ae.png",
+      "https://i.ibb.co/TBFDKHwd/file-00000000a834720a99daa927918b87dd.png"
     ]
   },
   {
