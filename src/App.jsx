@@ -94,7 +94,7 @@ const PROFILE = {
   location: "Lagos, NG • Remote & Onsite",
   email: "obsmoses@gmail.com",
   phone: "+234 (916) 587 7240",
-  status: "Available for Software Engineering, Infrastructure",
+  status: "Available for Software Engineering, Infrastructure role",
   socials: {
     github: "https://github.com/obsmoses",
     linkedin: "https://linkedin.com/in/null",
