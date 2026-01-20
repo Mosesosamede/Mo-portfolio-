@@ -86,7 +86,7 @@ const PROJECTS = [
 const PROFILE = {
   name: "Moses Obaseki",
   nickname: "Mo",
-  title: "Senior Full-Stack Developer",
+  title: "Senior Full-Stack Engineer",
   summaryItems: [
     "Architected a distributed processing pipeline for large-scale sentiment analysis",
     "Optimized data flow and system performance under high-volume workloads",
@@ -95,7 +95,6 @@ const PROFILE = {
   location: "Lagos, NG • Remote & Onsite",
   email: "obsmoses@gmail.com",
   phone: "+234 (916) 587 7240",
-  website: "https://obsmoses.page.gd",
   status: "Available for Software Engineering, Infrastructure",
   socials: {
     github: "https://github.com/obsmoses",
