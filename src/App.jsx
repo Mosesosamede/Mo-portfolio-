@@ -23,8 +23,7 @@ import {
 } from "lucide-react";
 
 /**
- * 1. EDIT YOUR IMAGES HERE
- * Replace the URLs in the 'images' array for each project.
+ * slider section 
  */
 const PROJECTS = [
   {
